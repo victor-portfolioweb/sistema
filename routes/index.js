@@ -1,20 +1,9 @@
-// routes/index.js
-const express = require('express');
-const router = express.Router();
+var express = require('express');
+var router = express.Router();
 
-// Rota principal
-router.get('/', (req, res) => {
-  res.render('index');
-});
-
-// Rota sobre
-router.get('/about', (req, res) => {
-  res.render('about');
-});
-
-// Rota de contato
-router.get('/contact', (req, res) => {
-  res.render('contact');
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Express' });
 });
 
 module.exports = router;
